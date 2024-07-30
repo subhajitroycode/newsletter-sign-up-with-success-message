@@ -88,7 +88,7 @@ body {
   border: 1px solid var(--primary-dark-slate-grey);
 }
 
-.subscription-form button {
+.btn {
   padding: 15px 0;
   border-radius: 5px;
   border: none;
@@ -99,7 +99,7 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 
-.subscription-form button:hover {
+.btn:hover {
   background-color: var(--primary-tomato);
   box-shadow: 0px 6px 10px -5px var(--primary-tomato);
 }
@@ -112,7 +112,7 @@ body {
 .error-container .error-message {
   position: absolute;
   top: -36px;
-  right: -51%;
+  right: -50%;
   font-weight: 700;
   font-size: 0.8rem;
   color: var(--primary-tomato);
@@ -127,4 +127,94 @@ body {
 .subscription-form .error-input:focus {
   outline: none;
   border: 2px solid rgb(240, 48, 48);
+}
+
+.success-container {
+  background-color: var(--primary-white);
+  width: 35%;
+  margin: auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  color: var(--primary-dark-slate-grey);
+}
+
+.success-container img {
+  width: 40px;
+}
+
+.success-container h1 {
+  font-size: 2.8rem;
+  line-height: 44px;
+  margin: 20px 0 30px;
+}
+
+.success-container p span {
+  font-weight: 700;
+}
+
+.success-container button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (width <= 650px) {
+  body {
+    display: block;
+    background-color: var(--primary-white);
+  }
+
+  .newsletter-container {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+  .signup-container {
+    margin: 2rem;
+  }
+
+  .signup-container h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+  }
+
+  .signup-container p {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .signup-container ul li {
+    align-items: flex-start;
+    font-size: 1.2rem;
+  }
+
+  .signup-container ul li img {
+    margin-top: 1px;
+    width: 24px;
+    margin-right: 1.2rem;
+  }
+
+  .signup-container ul li:last-child img {
+    width: 21px;
+  }
+
+  .subscription-form {
+    width: 100%;
+  }
+
+  .subscription-form input {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .error-container .error-message {
+    width: 118px;
+    right: -1%;
+  }
 }

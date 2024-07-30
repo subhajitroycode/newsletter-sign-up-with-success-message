@@ -1,27 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import SuccessMessage from "./SuccessMessage";
 
-const SubscriptionForm = () => {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
+const SubscriptionForm = ({ setIsSubscribed, setEmail }) => {
+  const [emailInput, setEmailInput] = useState("");
   const errorMessageRef = useRef(null);
   const emailRef = useRef(null);
-
-  useEffect(() => {
-    if (isSubscribed) {
-      console.log(isSubscribed);
-    }
-  }, [isSubscribed]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailRegex.test(email.trim())) {
+    if (emailRegex.test(emailInput.trim())) {
       setIsSubscribed(true);
+      setEmail(emailInput.trim());
       errorMessageRef.current.style.display = "none";
       emailRef.current.classList.remove("error-input");
-      setEmail("");
+      setEmailInput("");
     } else {
       setIsSubscribed(false);
       errorMessageRef.current.style.display = "block";
@@ -40,10 +34,12 @@ const SubscriptionForm = () => {
         placeholder="email@company.com"
         id="email"
         ref={emailRef}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={emailInput}
+        onChange={(e) => setEmailInput(e.target.value)}
       />
-      <button type="submit">Subscribe to monthly newsletter</button>
+      <button className="btn" type="submit">
+        Subscribe to monthly newsletter
+      </button>
     </form>
   );
 };

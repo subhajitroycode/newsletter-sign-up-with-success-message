@@ -1,24 +1,17 @@
 const SuccessMessage = ({ email }) => {
   return (
-    <div style={successMessageStyle}>
-      <p>Thanks for subscribing!</p>
+    <section className="success-container">
+      <img src="/icon-success.svg" alt="success icon" />
+      <h1>Thanks for subscribing!</h1>
       <p>
-        A confirmation email has been sent to {email}. Please open it and click
-        the button inside to confirm your subscription.
+        A confirmation email has been sent to <span>{email}</span>. Please open
+        it and click the button inside to confirm your subscription.
       </p>
-      <button onClick={() => window.location.reload()}>Dismiss message</button>
-    </div>
+      <button className="btn" onClick={() => window.location.reload()}>
+        Dismiss message
+      </button>
+    </section>
   );
-};
-
-const successMessageStyle = {
-  padding: "20px",
-  borderRadius: "8px",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-  textAlign: "center",
-  maxWidth: "400px",
-  margin: "auto",
-  marginTop: "50px",
 };
 
 export default SuccessMessage;
