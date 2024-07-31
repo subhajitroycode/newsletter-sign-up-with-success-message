@@ -161,6 +161,7 @@ body {
   body {
     display: block;
     background-color: var(--primary-white);
+    min-height: auto;
   }
 
   .newsletter-container {
@@ -216,5 +217,28 @@ body {
   .error-container .error-message {
     width: 118px;
     right: -1%;
+  }
+
+  .success-container {
+    margin-top: 10rem;
+    width: auto;
+    padding: 1.8rem;
+  }
+
+  .success-container img {
+    width: auto;
+  }
+
+  .success-container h1 {
+    margin-top: 3.5rem;
+  }
+
+  .success-container p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .success-container button {
+    margin-top: 13rem;
   }
 }

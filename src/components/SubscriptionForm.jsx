@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import SuccessMessage from "./SuccessMessage";
+import { useRef, useState } from "react";
 
 const SubscriptionForm = ({ setIsSubscribed, setEmail }) => {
   const [emailInput, setEmailInput] = useState("");
