@@ -112,7 +112,8 @@ body {
 .error-container .error-message {
   position: absolute;
   top: -36px;
-  right: -50%;
+  right: -1%;
+  width: 118px;
   font-weight: 700;
   font-size: 0.8rem;
   color: var(--primary-tomato);
@@ -212,11 +213,6 @@ body {
 
   .btn {
     font-size: 18px;
-  }
-
-  .error-container .error-message {
-    width: 118px;
-    right: -1%;
   }
 
   .success-container {
